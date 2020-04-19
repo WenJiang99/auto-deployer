@@ -18,6 +18,17 @@ module.exports = appInfo => {
   // add your middleware config here
   config.middleware = [];
 
+  config.customLoader = {
+    constant: {
+      directory: 'app/constant',
+      inject: 'ctx',
+    },
+  };
+  config.security = {
+    csrf: {
+      enable: false,
+    },
+  };
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
